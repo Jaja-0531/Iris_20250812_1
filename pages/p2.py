@@ -7,7 +7,7 @@ st.title('IRIS品種預測')
 
 #模型載入
 svm = joblib.load('models/svm.joblib')
-knn = joblib.load('models/knn.joblib')
+knn = joblib.load('models/Knn.joblib')
 LR = joblib.load('models/LR.joblib')
 rf = joblib.load('models/RF.joblib')
 
@@ -53,3 +53,4 @@ if st.button('進行預測'):
     st.write(f'### 預測結果：{y}')
 
     st.write(f'### 品種名稱：{labels[y[0]]}')
+
