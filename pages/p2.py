@@ -9,7 +9,7 @@ st.title('IRIS品種預測')
 svm = joblib.load('models/svm.joblib')
 knn = joblib.load('models/knn.joblib')
 LR = joblib.load('models/LR.joblib')
-rf = joblib.load('models/rf.joblib')
+rf = joblib.load('models/RF.joblib')
 
 # 左側側邊攔：選擇模型
 s1 = st.sidebar.selectbox('選擇模型', ['SVM', 'KNN', 'LogisticRegression', 'RandomForest'])
@@ -51,4 +51,5 @@ if st.button('進行預測'):
     X = np.array([[se1, se2, se3, se4]])
     y = model.predict(X)
     st.write(f'### 預測結果：{y}')
+
     st.write(f'### 品種名稱：{labels[y[0]]}')
