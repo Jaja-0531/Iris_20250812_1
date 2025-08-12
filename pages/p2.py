@@ -5,7 +5,7 @@ import joblib
 
 st.title('IRIS品種預測')
 
-st.image('iris.png')
+
 
 #模型載入
 svm = joblib.load('models/svm.joblib')
@@ -55,5 +55,6 @@ if st.button('進行預測'):
     st.write(f'### 預測結果：{y}')
 
     st.write(f'### 品種名稱：{labels[y[0]]}')
+
 
 
